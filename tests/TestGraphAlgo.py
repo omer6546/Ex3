@@ -30,8 +30,11 @@ class TestGraphAlgo(unittest.TestCase):
         return None
 
     def test_get_graph(self):
-        self.ga.save_to_json('testgraph.json')
-        self.assertEqual(self.g, self.ga.get_graph())
+        self.assertEqual(True, self.ga.save_to_json('testgraph.json'))
+        self.assertEqual(True, self.ga.load_from_json('testgraph.json'))
+        self.assertEqual(False, self.ga.load_from_json('noname.json'))
+
+
 
     def test_load_save_json(self):
         self.assertEqual(self.g, self.ga.get_graph())

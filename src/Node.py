@@ -51,17 +51,3 @@ class Node:
 
     def get_pos(self) -> Geolocation:
         return self.pos
-
-
-def main():
-    edges = {}
-    edges[1] = {2: 3.5}
-    print(edges)
-    edges[1][2] = 4.5
-    print(edges)
-    edges[1][3] = 1.5
-    print(edges)
-
-
-if __name__ == '__main__':
-    main()
